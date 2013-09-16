@@ -15,14 +15,14 @@ http://www.quirksmode.org/js/detect.html
 
 First, install the browser-detection package from the command line, like so:
 
-````
+````js
 mrt add browser-detection
 ````
 
 
 Alternatively, if you'd like to bypass Atmosphere, and install directly from GitHub, you could update your application's smart.json file, like so:
 
-````
+````js
 {
   "meteor": {
     "branch": "master"
@@ -41,7 +41,7 @@ Alternatively, if you'd like to bypass Atmosphere, and install directly from Git
 
 The BrowserDetect object supports three parameters.
 
-````
+````js
 BrowserDetect.browser
 BrowserDetect.version
 BrowserDetect.OS
@@ -50,7 +50,7 @@ BrowserDetect.OS
 ------------------------
 ### Supported Browsers and Operating Systems
 
-````
+````js
 // currently supports the following browsers
 Chrome
 OmniWeb
@@ -103,4 +103,8 @@ Router.map(function() {
 
 Pull requests totally accepted in helping keep this library up-to-date.
 
+------------------------
+### Licensing
 
+MIT License on the Meteor package stuff. Otherwise, whatever the code at Quirksmode is licensed under.  (I'm assuming MIT/GPL)
+http://www.quirksmode.org/js/detect.html.
