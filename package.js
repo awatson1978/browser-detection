@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "Meteorite package that provides a simple history of the Dow Jones Industrial Average over 5 years."
+    summary: "Meteorite package that provides browser detection."
 });
 
 Package.on_use(function (api) {

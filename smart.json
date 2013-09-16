@@ -3,6 +3,6 @@
     "description": "Meteorite package that provides browser detection.",
     "homepage": "https://github.com/awatson1978/browser-detection",
     "author": "Abigail Watson  (http://www.pentasyllabic.com)",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "git": "https://github.com/awatson1978/browser-detection.git"
 }
