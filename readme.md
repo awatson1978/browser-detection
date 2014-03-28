@@ -88,7 +88,7 @@ Router.map(function() {
         before: function () {
             // render the unsupported browser page if user isn't using Chrome
             if(BrowserDetect.browser != "Chrome"){
-                this.render('unsupportedBrowserPage');
+                this.render('browserNotSupportedPage');
                 this.stop();
             }
             if (!Meteor.user()) {
