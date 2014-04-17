@@ -85,7 +85,7 @@ Router.map(function() {
             // make sure the collections connect
             return Posts.findOne(this.params._id)
         },
-        before: function () {
+        onBeforeAction: function () {
             // render the unsupported browser page if user isn't using Chrome
             if(BrowserDetect.browser != "Chrome"){
                 this.render('browserNotSupportedPage');
