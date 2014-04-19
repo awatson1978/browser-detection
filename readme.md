@@ -108,10 +108,3 @@ Pull requests totally accepted in helping keep this library up-to-date.
 
 MIT License on the Meteor package stuff. Otherwise, whatever the code at Quirksmode is licensed under.  (I'm assuming MIT/GPL)
 http://www.quirksmode.org/js/detect.html.
-
-------------------------
-### Support
-Found this package to be useful?  Consider tipping the package maintainer for their time!  
-
-[![Support via Gittip](https://raw.github.com/gittip/www.gittip.com/master/www/assets/gittip.png)](https://www.gittip.com/awatson1978/)  
-
