@@ -1,28 +1,27 @@
 BrowserDetect = {
     init: function () {
-        this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+        this.browser = this.searchString(this.dataBrowser) || "an unknown browser";
         this.version = this.searchVersion(navigator.userAgent)
             || this.searchVersion(navigator.appVersion)
             || "an unknown version";
         this.OS = this.searchString(this.dataOS) || "an unknown OS";
     },
     searchString: function (data) {
-        for (var i=0;i<data.length;i++)	{
+        for (var i=0; i<data.length; i++)	{
             var dataString = data[i].string;
             var dataProp = data[i].prop;
             this.versionSearchString = data[i].versionSearch || data[i].identity;
+
             if (dataString) {
-                if (dataString.indexOf(data[i].subString) != -1)
-                    return data[i].identity;
+                if (dataString.indexOf(data[i].subString) != -1) { return data[i].identity };
             }
-            else if (dataProp)
-                return data[i].identity;
+            else if (dataProp) { return data[i].identity };
         }
     },
     searchVersion: function (dataString) {
         var index = dataString.indexOf(this.versionSearchString);
-        if (index == -1) return;
-        return parseFloat(dataString.substring(index+this.versionSearchString.length+1));
+        if (index === -1) return;
+        else { return parseFloat(dataString.substring(index + this.versionSearchString.length + 1)); };
     },
     dataBrowser: [
         {
@@ -30,7 +29,8 @@ BrowserDetect = {
             subString: "Chrome",
             identity: "Chrome"
         },
-        { 	string: navigator.userAgent,
+        {
+            string: navigator.userAgent,
             subString: "OmniWeb",
             versionSearch: "OmniWeb/",
             identity: "OmniWeb"
@@ -66,7 +66,8 @@ BrowserDetect = {
             subString: "Camino",
             identity: "Camino"
         },
-        {		// for newer Netscapes (6+)
+        // for newer Netscapes (6+)
+        {
             string: navigator.userAgent,
             subString: "Netscape",
             identity: "Netscape"
@@ -83,14 +84,15 @@ BrowserDetect = {
             identity: "Mozilla",
             versionSearch: "rv"
         },
-        { 		// for older Netscapes (4-)
+        // for older Netscapes (4-)
+        {
             string: navigator.userAgent,
             subString: "Mozilla",
             identity: "Netscape",
             versionSearch: "Mozilla"
         }
     ],
-    dataOS : [
+    dataOS: [
         {
             string: navigator.platform,
             subString: "Win",
@@ -112,6 +114,6 @@ BrowserDetect = {
             identity: "Linux"
         }
     ]
-
 };
+
 BrowserDetect.init();
