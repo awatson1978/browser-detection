@@ -26,6 +26,12 @@ BrowserDetect = {
     dataBrowser: [
         {
             string: navigator.userAgent,
+            subString: "Edge",
+            identity: "Edge",
+            versionSearch: "Edge/"
+        },
+        {
+            string: navigator.userAgent,
             subString: "Chrome",
             identity: "Chrome"
         },
